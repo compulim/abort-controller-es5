@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <script src="https://unpkg.com/babel-standalone"></script>
+    <script src="/dist/abort-controller-es5.production.min.js"></script>
+  </head>
+  <body>
+    <script type="text/babel">
+      console.log(window.AbortController);
+
+      const controller = new AbortController();
+
+      controller.signal.addEventListener('abort', event => {
+        // Handle abort signal
+        console.log('abort', event);
+      });
+
+      controller.abort();
+    </script>
+  </body>
+</html>
