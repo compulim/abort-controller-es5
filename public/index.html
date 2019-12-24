@@ -3,9 +3,11 @@
   <head>
     <script src="https://unpkg.com/babel-standalone"></script>
     <script src="/dist/abort-controller-es5.production.min.js"></script>
+    <!-- <script src="https://unpkg.com/abort-controller-es5@0.0.0-master.feb49a3/dist/abort-controller-es5.production.min.js"></script> -->
   </head>
   <body>
     <script type="text/babel">
+      // In browsers which do not support AbortController natively, this should returns a custom implementation.
       console.log(window.AbortController);
 
       const controller = new AbortController();
