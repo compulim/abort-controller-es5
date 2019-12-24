@@ -3,6 +3,7 @@
   "version": "0.0.0-0",
   "description": "",
   "files": [
+    "dist/**/*",
     "src/**/*",
     "webpack-lib.config.js"
   ],

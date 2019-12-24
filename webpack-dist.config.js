@@ -12,7 +12,7 @@ module.exports = {
           join(__dirname, 'node_modules/abort-controller/'),
           join(__dirname, 'node_modules/event-target-shim/')
         ],
-        test: /\.m?js$/,
+        test: /\.m?js$/iu,
         use: {
           loader: 'babel-loader',
           options: {

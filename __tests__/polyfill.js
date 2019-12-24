@@ -70,9 +70,9 @@ describe('Using package', () => {
 
       const { AbortController, AbortSignal, default: DefaultAbortController } = require('../lib/index');
 
-      expect(typeof AbortController).toBe('function');
-      expect(typeof AbortSignal).toBe('function');
       expect(DefaultAbortController).toBe(AbortController);
+      expect(typeof AbortController.prototype.constructor).toBe('function');
+      expect(typeof AbortSignal.prototype.constructor).toBe('function');
     });
   });
 });
