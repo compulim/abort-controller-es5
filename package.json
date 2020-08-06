@@ -9,8 +9,8 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "postinstall": "npx -p webpack-cli@3.3.11 -p webpack@4.43.0 webpack-cli --config webpack-lib.config.js",
-    "prepublishOnly": "npx -p webpack-cli@3.3.11 -p webpack@4.43.0 webpack-cli --config webpack-dist.config.js",
+    "postinstall": "webpack-cli --config webpack-lib.config.js",
+    "prepublishOnly": "webpack-cli --config webpack-dist.config.js",
     "pretest": "npm run prepublishOnly",
     "test": "jest"
   },
@@ -22,8 +22,7 @@
     "abort",
     "abort controller",
     "abortcontroller",
-    "abort-controller",
-    "promise"
+    "abort-controller"
   ],
   "author": "William Wong <compulim@hotmail.com> (http://compulim.info/)",
   "license": "MIT",
@@ -32,15 +31,15 @@
   },
   "homepage": "https://github.com/compulim/abort-controller-es5#readme",
   "dependencies": {
-    "@babel/core": "7.9.6",
-    "@babel/preset-env": "7.9.6",
-    "babel-loader": "8.1.0"
+    "@babel/core": "7.11.1",
+    "@babel/preset-env": "7.11.0",
+    "babel-loader": "8.1.0",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12"
   },
   "devDependencies": {
     "abort-controller": "^3.0.0",
-    "jest": "^26.0.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "jest": "^26.2.2"
   },
   "peerDependencies": {
     "abort-controller": "*"
