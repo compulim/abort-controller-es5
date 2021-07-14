@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <script src="https://unpkg.com/babel-standalone"></script>
     <script src="/dist/abort-controller-es5.production.min.js"></script>
-    <!-- <script src="https://unpkg.com/abort-controller-es5@0.0.0-master.feb49a3/dist/abort-controller-es5.production.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/abort-controller-es5@master/dist/abort-controller-es5.production.min.js"></script> -->
   </head>
   <body>
-    <script type="text/babel">
+    <script>
       // In browsers which do not support AbortController natively, this should returns a custom implementation.
       console.log(window.AbortController);
 
       const controller = new AbortController();
 
-      controller.signal.addEventListener('abort', event => {
+      controller.signal.addEventListener('abort', function (event) {
         // Handle abort signal
         console.log('abort', event);
       });
