@@ -9,6 +9,7 @@
     "src/**/*"
   ],
   "main": "lib/index.js",
+  "module": "lib/esm/index.mjs",
   "scripts": {
     "build:cjs": "esbuild ./src/index.js --bundle --format=cjs | babel --config-file ./babel.config.cjs.json --filename index.js --out-file lib/index.js",
     "build:esm": "esbuild ./src/index.js --bundle --format=esm | babel --config-file ./babel.config.esm.json --filename index.mjs --out-file lib/esm/index.mjs",
