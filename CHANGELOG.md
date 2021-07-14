@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Moved to [`esbuild`](https://npmjs.com/package/esbuild) from Webpack, in PR [#XXX](https://github.com/compulim/abort-controller-es/pull/XXX)
+
 ## [1.2.1] - 2021-07-13
 
 ### Changed
