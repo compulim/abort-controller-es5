@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Bumped dependencies in PR [#17](https;//github.com/compulim/abort-controller-es5/pull/17)
+   - [`@babel/core@7.14.6`](https://npmjs.com/package/@babel/core)
+   - [`@babel/preset-env@7.14.7`](https://npmjs.com/package/@babel/preset-env)
+   - [`abort-controller@3.0.0`](https://npmjs.com/package/abort-controller)
+   - [`babel-loader@8.2.2`](https://npmjs.com/package/babel-loader)
+   - [`jest@27.0.6`](https://npmjs.com/package/jest)
+   - [`webpack-cli@3.3.12`](https://npmjs.com/package/webpack-cli)
+   - [`webpack@4.46.0`](https://npmjs.com/package/webpack)
+
 ## [1.2.0] - 2020-08-06
 
 ### Changed
