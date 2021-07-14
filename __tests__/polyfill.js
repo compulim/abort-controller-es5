@@ -1,4 +1,8 @@
-describe('Using bundle', () => {
+/**
+ * @jest-environment jsdom
+ */
+
+ describe('Using bundle', () => {
   describe('in a browser with native AbortController', () => {
     class NativeAbortController {}
     class NativeAbortSignal {}
