@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <script src="/dist/abort-controller-es5.production.min.js"></script>
-    <!-- <script src="https://unpkg.com/abort-controller-es5@master/dist/abort-controller-es5.production.min.js"></script> -->
+    <script src="abort-controller-es5.production.min.js"></script>
   </head>
   <body>
+    <p class="polyfill-node" hidden>
+      This browser do not have native implementation of <code>AbortController</code>.
+    </p>
+    <button class="abort-button">Click here to abort</button>
     <script>
-      // In browsers which do not support AbortController natively, this should returns a custom implementation.
-      console.log(window.AbortController);
+      if (!/\{\s+\[native code\]/.test(Function.prototype.toString.call(window.AbortController))) {
+        document.querySelector('.polyfill-node').removeAttribute('hidden');
+      }
 
       const controller = new AbortController();
 
       controller.signal.addEventListener('abort', function (event) {
-        // Handle abort signal
-        console.log('abort', event);
+        const result = document.createElement('p');
+
+        result.textContent = 'Aborted';
+
+        document.body.appendChild(result);
       });
 
-      controller.abort();
+      document.querySelector('.abort-button').addEventListener('click', function () {
+        controller.abort();
+      });
     </script>
   </body>
 </html>
