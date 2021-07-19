@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "abort-controller": "*",
-    "abort-controller-es5": "file:abort-controller-es5.tgz",
+    "abort-controller-es5": "file:package.tgz",
     "esbuild": "*",
     "jest": "*",
     "webpack": "*",
