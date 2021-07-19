@@ -98,7 +98,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          *.tgz package.tgz
+          mv *.tgz package.tgz
           npm install
 
       - name: Run tests
