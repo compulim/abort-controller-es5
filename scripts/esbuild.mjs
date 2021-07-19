@@ -15,7 +15,8 @@ import esbuild from 'esbuild';
     cwd: dirname(createRequire(import.meta.url).resolve(packageName))
   });
 
-  const external = Object.keys(dependencies).filter(d => d !== 'event-target-shim');
+  // "event-target-shim" need to be transpiled.
+  const external = Object.keys(dependencies).filter(dependency => dependency !== 'event-target-shim');
 
   external.length &&
     console.log(`Excluding the following dependencies:\n\n${external.map(name => `- ${name}`).join('\n')}`);
