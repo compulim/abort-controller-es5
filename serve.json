@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "destination": "dist/abort-controller-es5.production.min.js",
+      "source": "/abort-controller-es5.production.min.js"
+    },
+    {
+      "destination": "public/index.html",
+      "source": "/"
+    }
+  ]
+}
