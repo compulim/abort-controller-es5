@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Moved to [`esbuild`](https://npmjs.com/package/esbuild) from Webpack, in PR [#19](https://github.com/compulim/abort-controller-es5/pull/19)
-- Move to end-to-end tests from unit tests, in PR [#22](https://github.com/compulim/p-defer-es5/pull/22)
-- Ponyfill `globalThis` and `Promise` via `core-js-pure` by usage, in PR [#22](https://github.com/compulim/p-defer-es5/pull/22)
+- Move to end-to-end tests from unit tests, in PR [#22](https://github.com/compulim/abort-controller-es5/pull/22)
+- Ponyfill `globalThis` and `Promise` via `core-js-pure` by usage, in PR [#22](https://github.com/compulim/abort-controller-es5/pull/22)
 
 ## [1.2.1] - 2021-07-13
 
