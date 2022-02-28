@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2022-02-28
+
 ### Changed
 
 - Updated end-to-end tests, by [@compulim](https://github.com/compulim), in PR [#25](https://github.com/compulim/abort-controller-es5/pull/25)
