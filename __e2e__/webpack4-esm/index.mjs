@@ -8,7 +8,10 @@
 // - If we "require", the default imported object is { default: () => any }.
 // - If we "require" and "mainFields" is "main", the default imported object is () => any.
 
-import DefaultAbortController, { AbortController, AbortSignal } from 'abort-controller-es5';
+// webpack@4 did not resolve to ESM version of `abort-controller-es5`.
+import AbortControllerPackage from 'abort-controller-es5';
+
+const { AbortController, AbortSignal, default: DefaultAbortController } = AbortControllerPackage;
 
 console.log(typeof DefaultAbortController);
 console.log(AbortController === DefaultAbortController);

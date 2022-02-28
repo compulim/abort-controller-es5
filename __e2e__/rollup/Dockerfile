@@ -12,8 +12,11 @@ RUN node --version
 RUN npm --version
 
 RUN npm init --yes
-RUN npm install abort-controller
-RUN npm install ./`ls *.tgz`
-RUN npx rollup ./index.js --file ./dist/main.js --format iife
+RUN npm install @rollup/plugin-commonjs @rollup/plugin-node-resolve abort-controller rollup
+RUN npm install ./`ls abort-controller-es5-*.tgz`
+RUN npx --no-install rollup --config
+
+# As we already bundled everything, the bundle should not need to load anything from /node_modules/.
+RUN rm -r node_modules
 
 ENTRYPOINT node ./dist/main.js
