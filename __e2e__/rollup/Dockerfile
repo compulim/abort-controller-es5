@@ -12,7 +12,7 @@ RUN node --version
 RUN npm --version
 
 RUN npm init --yes
-RUN npm install p-defer
+RUN npm install abort-controller
 RUN npm install ./`ls *.tgz`
 RUN npx rollup ./index.js --file ./dist/main.js --format iife
 
