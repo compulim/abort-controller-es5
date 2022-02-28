@@ -1,10 +1,10 @@
 # abort-controller-es5
 
-[![npm version](https://img.shields.io/npm/v/abort-controller-es5.svg)](https://www.npmjs.com/package/abort-controller-es5) [![Build Status](https://travis-ci.org/compulim/abort-controller-es5.svg?branch=master)](https://travis-ci.org/compulim/abort-controller-es5)
+[![npm version](https://img.shields.io/npm/v/abort-controller-es5.svg)](https://www.npmjs.com/package/abort-controller-es5) [![npm version](https://img.shields.io/npm/v/abort-controller-es5/main.svg)](https://www.npmjs.com/package/abort-controller-es5/v/main) [![Continuous deployment](https://github.com/compulim/abort-controller-es5/actions/workflows/continuous-deployment.yml/badge.svg?branch=main)](https://github.com/compulim/abort-controller-es5/actions/workflows/continuous-deployment.yml)
 
-This package is based on [`abort-controller`](https://npmjs.com/package/abort-controller). Although the original package contains an [ES5 bundle](https://unpkg.com/abort-controller/dist/abort-controller.umd.js), it did not contains an ES5 module. Importing the module directly or indirectly may break web apps running on ES5 browsers.
+This package is based on [`abort-controller`](https://npmjs.com/package/abort-controller). It did not contains an ES5 module. Importing the module directly or indirectly may break web apps running on ES5 browsers.
 
-On install, this package will transpile your version of `abort-controller` to make it compatible with ES5 browsers.
+On `npm install`, this package will transpile your version of `abort-controller` to make it compatible with ES5 browsers. Then in your code, you use `abort-controller-es5` instead of `abort-controller`.
 
 Package authors should consider importing this package instead of `abort-controller`, so your packages will not break your users due to having `abort-controller` as a transient dependency.
 
@@ -27,7 +27,6 @@ controller.signal.addEventListener('abort', event => {
 
 controller.abort();
 ```
-
 You can also use it in HTML:
 
 ```html
@@ -36,7 +35,7 @@ You can also use it in HTML:
 
 ## How it works
 
-On `postinstall`, this package will run Babel and Webpack to transpile `abort-controller` into a single file.
+On `postinstall`, this package will run `esbuild` to bundle `abort-controller` into a single file. Then run Babel to transpile it for ES5.
 
 This package peer-depends on `abort-controller`. Thus, you can select your own version of `abort-controller`.
 
@@ -56,7 +55,7 @@ Be sure to include the original license and continue to depends on the package t
 
 ### Modify your bundler configuration
 
-Webpack do not transpile code under `/node_modules/` unless specified explicitly. You can modify `webpack.config.js` to include `/node_modules/abort-controller/` and `/node_modules/event-target-shim/` (its dependencies) and use `babel-loader` to transpile it on-the-fly.
+Some bundlers is configured not to transpile code under `/node_modules/` unless specified explicitly. You can modify bundler configuration to include `/node_modules/abort-controller/` and use Babel to transpile it while bundling.
 
 ## Contributions
 

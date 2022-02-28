@@ -1,8 +1,8 @@
 module.exports = {
-  entry: './web.js',
+  entry: './index.js',
   mode: 'production',
   output: {
-    filename: 'main.webpack-commonjs.js'
+    filename: 'main.js'
   },
   resolve: {
     mainFields: ['main']
