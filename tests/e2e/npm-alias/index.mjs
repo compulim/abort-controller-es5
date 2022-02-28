@@ -1,4 +1,7 @@
-// "ms" is being aliased as "abort-controller", thus, "abort-controller-es5" is actually "ms".
-const ms = require('abort-controller-es5');
+import DefaultAbortController, { AbortController, AbortSignal } from 'abort-controller-es5';
 
-console.log(ms(1000));
+console.log(typeof DefaultAbortController);
+console.log(AbortController === DefaultAbortController);
+console.log(typeof AbortSignal);
+
+void new AbortController();

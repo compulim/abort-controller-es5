@@ -12,8 +12,8 @@ RUN node --version
 RUN npm --version
 
 RUN npm init --yes
-# Alias "ms" as "abort-controller", so we are actually running "ms".
-RUN npm install abort-controller@npm:ms
+RUN npm install abort-controller
+RUN cp overwrite.mjs node_modules/abort-controller/dist/abort-controller.mjs
 RUN npm install --legacy-peer-deps ./`ls abort-controller-es5-*.tgz`
 
-ENTRYPOINT node ./index.js
+ENTRYPOINT node ./index.mjs
