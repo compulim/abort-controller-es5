@@ -8,10 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Updated end-to-end tests, by [@compulim](https://github.com/compulim), in PR [#XXX](https://github.com/compulim/abort-controller-es5/pull/XXX)
+- Updated end-to-end tests, by [@compulim](https://github.com/compulim), in PR [#25](https://github.com/compulim/abort-controller-es5/pull/25)
    - Using Docker to isolate tests
    - Test against different combinations of Node.js, NPM, and resolvers
-- Bumped dependencies, by [@compulim](https://github.com/compulim), in PR [#XXX](https://github.com/compulim/abort-controller-es5/pull/XXX)
+- Bumped dependencies, by [@compulim](https://github.com/compulim), in PR [#25](https://github.com/compulim/abort-controller-es5/pull/25)
    - [`@babel/cli@7.17.6`](https://npmjs.com/package/@babel/cli)
    - [`@babel/core@7.17.5`](https://npmjs.com/package/@babel/core)
    - [`@babel/plugin-transform-runtime@7.17.0`](https://npmjs.com/package/@babel/plugin-transform-runtime)
