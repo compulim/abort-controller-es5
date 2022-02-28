@@ -28,7 +28,8 @@
     "postinstall:esm": "node ./scripts/esbuild.mjs abort-controller ./src/index.mjs esm lib/esm/index.bundled.mjs && babel ./lib/esm/index.bundled.mjs --config-file ./babel.config.esm.json --out-file ./lib/esm/index.mjs",
     "postinstall": "npm run postinstall:commonjs && npm run postinstall:esm",
     "prepublishOnly:global": "mkdirp ./dist && esbuild ./src/global.mjs --bundle --format=iife --minify --outfile=./lib/esm/global.bundled.mjs && babel ./lib/esm/global.bundled.mjs --config-file ./babel.config.global.json | terser --compress --mangle --output ./dist/abort-controller-es5.production.min.js",
-    "prepublishOnly": "npm run prepublishOnly:global"
+    "prepublishOnly": "npm run prepublishOnly:global",
+    "update": "npm install $(cat package.json | jq -r '.dependencies + .devDependencies | keys | .[]' | awk '{print $1 \"@latest\"}')"
   },
   "repository": {
     "type": "git",
@@ -54,12 +55,12 @@
     "@babel/runtime-corejs3": "^7.14.7",
     "esbuild": "^0.12.15",
     "mkdirp": "^1.0.4",
-    "read-pkg-up": "^8.0.0",
-    "terser": "^5.7.1"
+    "read-pkg-up": "^8.0.0"
   },
   "devDependencies": {
     "abort-controller": "^3.0.0",
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "terser": "^5.11.0"
   },
   "peerDependencies": {
     "abort-controller": ">= 3"
