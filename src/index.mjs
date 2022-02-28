@@ -1,4 +1,4 @@
-import AbortControllerImpl, { AbortSignal as AbortSignalImpl } from 'abort-controller';
+import AbortControllerImpl, { AbortSignal as AbortSignalImpl } from 'abort-controller/dist/abort-controller.mjs';
 
 const NativeAbortController = (typeof window === 'undefined' ? {} : window).AbortController;
 const AbortController = NativeAbortController || AbortControllerImpl;
