@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Bumped dependencies, by [@Gunn3r1995](https://github.com/Gunn3r1995), in PR [#26](https://github.com/compulim/abort-controller-es5/pull/26)
+- Bumped dependencies, by [@Gunn3r1995](https://github.com/Gunn3r1995), in PR [#31](https://github.com/compulim/abort-controller-es5/pull/31)
   - [`@babel/cli@7.23.0`](https://npmjs.com/package/@babel/cli)
   - [`@babel/core@7.23.2`](https://npmjs.com/package/@babel/core)
   - [`@babel/plugin-transform-runtime@7.23.2`](https://npmjs.com/package/@babel/plugin-transform-runtime)
