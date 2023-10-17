@@ -48,19 +48,19 @@
   },
   "homepage": "https://github.com/compulim/abort-controller-es5#readme",
   "dependencies": {
-    "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.5",
-    "@babel/plugin-transform-runtime": "^7.17.0",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/runtime-corejs3": "^7.17.2",
-    "esbuild": "^0.14.23",
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/plugin-transform-runtime": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/runtime-corejs3": "^7.23.2",
+    "esbuild": "^0.14.54",
     "mkdirp": "^1.0.4",
     "read-pkg-up": "^9.1.0"
   },
   "devDependencies": {
     "abort-controller": "^3.0.0",
     "jest": "^27.5.1",
-    "terser": "^5.11.0"
+    "terser": "^5.22.0"
   },
   "peerDependencies": {
     "abort-controller": ">= 3"
